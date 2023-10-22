@@ -1,6 +1,34 @@
+import {
+  Eye,
+  PencilLine,
+  UserCircle,
+  UserSquare,
+  UsersFour,
+} from "phosphor-react";
+import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+
 import { Avatar } from "../Avatar/Avatar";
 import styles from "./Sidebar.module.css";
-import { PencilLine } from "phosphor-react";
+import AccordionBar from "../Accordion/AccordionBar";
+
+const accordionsData = [
+  {
+    id: 1,
+    header: "Recently Viewed",
+    content: ["#ReactCommunity", "#NextJS", "#Typescript", "#Javascript"],
+  },
+  {
+    id: 2,
+    header: "Groups",
+    content: [
+      "Best React Community",
+      "Developers Front-End",
+      "Developer React",
+      "Bugs And Errors",
+    ],
+  },
+];
+
 export function Sidebar() {
   return (
     <aside className={styles.sidebar}>
@@ -13,12 +41,38 @@ export function Sidebar() {
         <strong>Monnuery Júnior</strong>
         <span>FrontEnd Developer</span>
       </div>
-      <footer>
+
+      <div className={styles.editProfile}>
         <a href="#">
           <PencilLine size={20} />
           Editar seu perfil
         </a>
-      </footer>
+      </div>
+      <div className={styles.followers}>
+        <div className={styles.followersContent}>
+          <strong>
+            Followers <UserCircle />
+          </strong>
+          <span>5984 </span>
+        </div>
+        <div className={styles.followersContent}>
+          <strong>
+            Following <UserCircle />
+          </strong>
+          <span>999</span>
+        </div>
+      </div>
+      <div className={styles.accordionContainer}>
+        {accordionsData.map((item) => {
+          return (
+            <AccordionBar
+              id={item.id}
+              header={item.header}
+              content={item.content}
+            />
+          );
+        })}
+      </div>
     </aside>
   );
 }

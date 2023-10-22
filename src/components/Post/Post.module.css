@@ -1,7 +1,7 @@
 .post {
     background-color: var(--gray-800);
     border-radius: 8px;
-    padding: 2.5rem;
+    padding: 2.5rem 1rem;
 }
 
 .post+.post {
@@ -12,10 +12,11 @@
     display: flex;
     justify-content: space-between;
     padding: 0 .5rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .post>header time {
+
     font-size: 1rem;
     color: var(--gray-400);
 }

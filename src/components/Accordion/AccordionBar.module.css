@@ -1,0 +1,63 @@
+.accordionButton {
+    width: 100%;
+    height: 100%;
+}
+
+
+.accordion button {
+    width: 100%;
+    background-color: transparent;
+    color: var(--gray-100);
+    border: 1px solid var(--purple-600);
+    height: 50px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.accordion strong {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+    padding: 0 1rem;
+}
+
+.accordion a {
+    background-color: transparent;
+    color: var(--gray-400);
+    margin: 1rem 0;
+    padding: 1rem 0;
+    height: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    transition: .2s;
+    border-bottom: 1px solid;
+    border-color: transparent;
+
+}
+
+.accordion a:hover {
+    border-color: var(--purple-600);
+}
+
+
+
+@media (max-width:768px) {
+    .accordionContainer {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0 1rem;
+        width: 100%;
+    }
+}

@@ -16,7 +16,6 @@
 
 :focus {
     outline: transparent;
-    box-shadow: 0 0 0 2px var(--purple-800);
 }
 
 * {
@@ -24,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    border: 0;
 }
 
 body {
