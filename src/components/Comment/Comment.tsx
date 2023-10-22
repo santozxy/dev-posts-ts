@@ -4,12 +4,18 @@ import { Heart, Trash } from "phosphor-react";
 import { Avatar } from "../Avatar/Avatar";
 
 interface CommentProps {
+  name: string;
   content: string;
   onDeleteComment: (comment: string) => void;
   avatar: string;
 }
 
-export function Comment({ avatar, content, onDeleteComment }: CommentProps) {
+export function Comment({
+  name,
+  avatar,
+  content,
+  onDeleteComment,
+}: CommentProps) {
   const [likeCount, setLikeCount] = useState(24);
   function handleLikeCount() {
     setLikeCount((state) => state + 1);
@@ -21,7 +27,7 @@ export function Comment({ avatar, content, onDeleteComment }: CommentProps) {
         <div className={styles.commentContent}>
           <header>
             <div className={styles.authorAndTime}>
-              <strong>Monnuery Júnior</strong>
+              <strong>{name}</strong>
               <time
                 title="21 de Novembro as 18:52"
                 dateTime="2023-10-21 18:52:46"

@@ -1,5 +1,6 @@
 import { ChangeEvent, FormEvent, InvalidEvent, useState } from "react";
 import { format, formatDistanceToNow } from "date-fns";
+import { toast } from "react-toastify";
 
 import { Avatar } from "../Avatar/Avatar";
 import { Comment } from "../Comment/Comment";
@@ -38,6 +39,16 @@ export function Post({ author, content, hashtags, publishedDate }: PostProps) {
   function handleCreateNewComment(event: FormEvent) {
     event.preventDefault();
     setComments([...comments, newComment]);
+    toast.success("💬 Comment added!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
     setNewComment("");
   }
 
@@ -51,6 +62,16 @@ export function Post({ author, content, hashtags, publishedDate }: PostProps) {
       return comment !== commentToDelete;
     });
     setComments(commentsWithoutDelete);
+    toast.success("💬 Comment Deleted!", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   }
 
   return (
@@ -111,6 +132,7 @@ export function Post({ author, content, hashtags, publishedDate }: PostProps) {
           return (
             <Comment
               key={comment}
+              name={author.name}
               content={comment}
               avatar={author.avatarUrl}
               onDeleteComment={deleteComment}
