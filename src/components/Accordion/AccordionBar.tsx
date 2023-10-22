@@ -1,6 +1,6 @@
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import styles from "./AccordionBar.module.css";
-import { ArrowUp, CaretDown, CaretUp, Eye, UsersThree } from "phosphor-react";
+import { CaretDown, CaretUp, Eye, UsersThree } from "phosphor-react";
 import { useState } from "react";
 
 interface AccordionsData {
@@ -34,7 +34,7 @@ export default function AccordionBar({ id, header, content }: AccordionsData) {
         className={styles.accordion}
       >
         {content.map((content) => {
-          return header === "Recently Viewed" ? (
+          return header === "Recently View" ? (
             <a key={content} href="#">
               <Eye />
               {content}

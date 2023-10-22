@@ -1,5 +1,8 @@
 import {
   Eye,
+  GithubLogo,
+  Link,
+  LinkedinLogo,
   PencilLine,
   UserCircle,
   UserSquare,
@@ -14,15 +17,15 @@ import AccordionBar from "../Accordion/AccordionBar";
 const accordionsData = [
   {
     id: 1,
-    header: "Recently Viewed",
+    header: "Recently View",
     content: ["#ReactCommunity", "#NextJS", "#Typescript", "#Javascript"],
   },
   {
     id: 2,
-    header: "Groups",
+    header: "My Groups",
     content: [
-      "Best React Community",
-      "Developers Front-End",
+      "React Community",
+      "Developers",
       "Developer React",
       "Bugs And Errors",
     ],
@@ -41,6 +44,17 @@ export function Sidebar() {
         <strong>Monnuery Júnior</strong>
         <span>FrontEnd Developer</span>
       </div>
+      <div className={styles.links}>
+        <a href="https://isdeveloper.com.br" title="Portfolio Web">
+          <Link size={25} weight="bold" />
+        </a>
+        <a href="https://github.com/santozxy" title="Github Profile">
+          <GithubLogo size={25} weight="bold" />
+        </a>
+        <a href="https://www.linkedin.com/in/monnueryj/" title="Portfolio Web">
+          <LinkedinLogo size={25} weight="bold" />
+        </a>
+      </div>
 
       <div className={styles.editProfile}>
         <a href="#">
@@ -51,13 +65,13 @@ export function Sidebar() {
       <div className={styles.followers}>
         <div className={styles.followersContent}>
           <strong>
-            Followers <UserCircle />
+            Followers <UserCircle weight="bold" />
           </strong>
-          <span>5984 </span>
+          <span>5984</span>
         </div>
         <div className={styles.followersContent}>
           <strong>
-            Following <UserCircle />
+            Following <UserCircle weight="bold" />
           </strong>
           <span>999</span>
         </div>
