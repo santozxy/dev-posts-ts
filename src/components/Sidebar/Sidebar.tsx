@@ -1,5 +1,4 @@
 import {
-  Eye,
   GithubLogo,
   Link,
   LinkedinLogo,
