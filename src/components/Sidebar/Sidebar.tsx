@@ -5,10 +5,7 @@ import {
   LinkedinLogo,
   PencilLine,
   UserCircle,
-  UserSquare,
-  UsersFour,
 } from "phosphor-react";
-import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 
 import { Avatar } from "../Avatar/Avatar";
 import styles from "./Sidebar.module.css";
