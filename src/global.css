@@ -26,6 +26,19 @@
     border: 0;
 }
 
+::-webkit-scrollbar-track {
+    background-color: var(--gray-900);
+}
+
+::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--purple-600);
+    border-radius: 3px;
+}
+
 body {
     background-color: var(--gray-900);
     color: var(--gray-300);
